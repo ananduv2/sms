@@ -24,7 +24,7 @@ if (isset($_GET['edit'])) {
      
 	<div class="modal-dialog">
 		<div class="modal-content">
-        <form method ="POST" action ="stuserver.php">
+        <form method ="POST" action ="stuedit.php">
 				<div class="modal-header">						
 					<h4 class="modal-title">Fill the Students Details</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>

@@ -43,7 +43,7 @@ foreach ($e as $data)
 <input type="submit" value="Find Students">
 </form>
 <div>
-	<form action="addatten.php" method="POST" style="padding-left: 10%;padding-top: 30px;padding-right: 10%;">
+	<form action="addatten.php?" method="POST" style="padding-left: 10%;padding-top: 30px;padding-right: 10%;">
 		<table style="width: 100%;table-layout: fixed;text-align: center;">
 			<tr>
 				<th>RegNo</th><th>Name</th><th>Attendance</th>
@@ -65,11 +65,11 @@ foreach ($e as $data)
             <td name='regno[]' value='".$key['regno']."'>".$key['regno']."</td>
             <td name='name[]' value='".$key['name']."'>".$key['name']."</td>
             <td >
-                <select name='attend[]'>
-                   <option value='Present'>Present</option>
-                   <option value='Absent'>Absent</option>
-                </select>
-            </td></tr>";
+            Present<input type='checkbox' checked name='ar[]' value='".$key['regno']."'>
+            Absent<input type='checkbox' name='ar2[]' value='".$key['regno']."'>
+
+            </td>
+            <input type='hidden' name='cname' value='$a'></tr>";
             }} 
             else
             {
@@ -82,23 +82,9 @@ foreach ($e as $data)
 
 			?>
 		</table>
-		<!--<input type="submit" value="Add Attendance" name="addatten" style="position: absolute;right: 50px">-->
+		<input type="submit" value="Add Attendance" name="addatten" style="position: absolute;right: 50px">
 	</form>
 </div>
-<script>
-            $(document).ready(function(){
-            $('#myDropDown').change(function(){
-                //Selected value
-                var inputValue = $(this).val();
-                alert("value in js "+inputValue);
 
-                //Ajax for calling php function
-                $.post('addatten.php', { dropdownValue: inputValue }, function(data){
-                    alert('ajax completed. Response:  '+data);
-                    //do after submission operation in DOM
-                });
-            });
-        });
-        </script>
 </body>
 </html>

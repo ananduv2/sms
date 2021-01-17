@@ -37,6 +37,8 @@ foreach ($e as $data)
 <b>Date:</b>
 <input type="date" name="day">
 <input type="submit" value="Search">
+
+
 </form>
 <a href="addattendance.php" style="position: absolute;right: 50px">Add Attendance</a>
 <div>
@@ -70,6 +72,7 @@ foreach ($e as $data)
 		</table>
 	</div>
 </div>
+
 </body>
 </html>
 
