@@ -23,6 +23,7 @@ th, td {
 	<option value="MCA2K19B">MCA2K19B</option>
 </select>
 <input type="submit" value="Find Students">
+<a href="addmark.php" style="position: absolute;right: 50px">Add Marks</a>
 </form>
 <div>
 	<div  style="padding-left: 10%;padding-top: 30px;padding-right: 10%;">
